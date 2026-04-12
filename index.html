@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How Old Are You? — Age Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Floating background blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <div class="wrapper">
+
+    <header class="site-header">
+      <div class="logo-mark">✦</div>
+      <p class="tagline">A little calculator about <em>you</em></p>
+    </header>
+
+    <main class="card">
+      <h1 class="card-title">How old<br><span>are you?</span></h1>
+      <p class="card-sub">Enter your birthday below and we'll do the math — right down to the seconds.</p>
+
+      <div class="input-row">
+        <div class="field">
+          <label for="day">Day</label>
+          <input type="number" id="day" placeholder="DD" min="1" max="31" />
+        </div>
+        <div class="field">
+          <label for="month">Month</label>
+          <input type="number" id="month" placeholder="MM" min="1" max="12" />
+        </div>
+        <div class="field">
+          <label for="year">Year</label>
+          <input type="number" id="year" placeholder="YYYY" min="1900" max="2025" />
+        </div>
+      </div>
+
+      <div class="error-msg" id="errorMsg" aria-live="polite"></div>
+
+      <button class="calc-btn" id="calcBtn" onclick="calculateAge()">
+        <span class="btn-text">Calculate</span>
+        <span class="btn-icon">→</span>
+      </button>
+
+      <!-- Results -->
+      <section class="results" id="results" aria-live="polite">
+        <div class="result-primary">
+          <div class="result-block" id="resYears">
+            <span class="num">—</span>
+            <span class="label">years</span>
+          </div>
+          <div class="result-block" id="resMonths">
+            <span class="num">—</span>
+            <span class="label">months</span>
+          </div>
+          <div class="result-block" id="resDays">
+            <span class="num">—</span>
+            <span class="label">days</span>
+          </div>
+        </div>
+
+        <div class="result-fun" id="resultFun">
+          <div class="fun-grid">
+            <div class="fun-item">
+              <span class="fun-num" id="totalDays">—</span>
+              <span class="fun-label">total days lived</span>
+            </div>
+            <div class="fun-item">
+              <span class="fun-num" id="totalHours">—</span>
+              <span class="fun-label">total hours</span>
+            </div>
+            <div class="fun-item">
+              <span class="fun-num" id="totalMinutes">—</span>
+              <span class="fun-label">total minutes</span>
+            </div>
+            <div class="fun-item">
+              <span class="fun-num" id="nextBirthday">—</span>
+              <span class="fun-label">days to next birthday</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="birthday-msg" id="birthdayMsg"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Made with a little love &amp; a lot of milliseconds ✦</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
