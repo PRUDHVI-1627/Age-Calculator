@@ -2,6 +2,9 @@
 
 A warm, beautifully designed age calculator that tells you exactly how old you are — down to years, months, days, total hours, and even minutes lived.
 
+<img width="1340" height="694" alt="Age Calculator Preview" src="https://github.com/user-attachments/assets/979806ff-207b-4190-850a-78bc9d7ee4bd" />
+
+
 ---
 
 ## What it does
